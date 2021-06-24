@@ -81,7 +81,7 @@ class _HomeScreenState extends BaseState<HomeScreen> {
               performBack(context);
             },
             isImageTitle: true,
-            imagePath: new File(user.image))
+            imagePath: user.image!=null?new File(user.image):null)
         : null;
   }
 

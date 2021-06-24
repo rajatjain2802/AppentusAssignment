@@ -75,7 +75,7 @@ class PhotoScreen extends ScreenState {
               performBack(context);
             },
             isImageTitle: true,
-            imagePath: new File(args.image))
+            imagePath:  args.image!=null?new File(args.image):null)
         : null;
   }
 
