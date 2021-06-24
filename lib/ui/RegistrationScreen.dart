@@ -182,7 +182,9 @@ class _RegistrationScreenState extends BaseState<RegistrationScreen> {
                       dao.createUser(user);
                       showSnackBar("User Created Successfully", bgColor: Colors.green);
                       clearData();
-                      Navigator.of(context).pop();
+                      Future.delayed(Duration(milliseconds: 500), () {
+                        Navigator.of(context).pop();
+                      });
                     } else {
                       showSnackBar("User Already Exist");
                     }
